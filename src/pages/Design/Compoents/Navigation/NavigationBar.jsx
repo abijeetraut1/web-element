@@ -8,13 +8,6 @@ import profileImage from "../../../../assets/test/cover.png";
 import Button from '../../../../Components/Buttons/Button';
 import Profile from '../../../../Components/Profile/Profile';
 
-// const navigation = [
-//     { name: 'Design', href: '/design' },
-//     { name: 'Pricing', href: '/pricing' },
-//     { name: 'Host', href: '/host' },
-//     { name: 'Developers', href: '/developers' },
-//     { name: 'Blogs', href: '/blogs' },
-// ];
 
 export default function NavigationBar() {
     // const dispatch = useDispatch();

@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       backgroundColor: {
-        "dark-01": "#101418"
+        "dark-navigation": "#090e10",
+        "dark-sliders": "#131b20",
       }
     },
   },

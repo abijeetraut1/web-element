@@ -1,21 +1,22 @@
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
-import Designs from './pages/Designs/Designs/Designs';
-import { Provider } from 'react-redux';
+import Design from './pages/Design/Design';
+import { Provider as ReduxProvider } from 'react-redux';
 import store from './reduxFunctions/Store';
 
 function App() {
   return (
-    <Provider store={store}>
-      <section className="App">
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" exact element={<Home />} />
-            <Route path="/design" exact element={<Designs />} />
-          </Routes>
-        </BrowserRouter>
-      </section>
-    </Provider>
+    <ReduxProvider store={store}>
+        <section className="App">
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/design" element={<Design />} />
+            </Routes>
+          </BrowserRouter>
+        </section>
+    </ReduxProvider>
   );
 }
 

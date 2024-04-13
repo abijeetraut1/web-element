@@ -1,14 +1,24 @@
 import React from 'react';
-import { FiSidebar } from 'react-icons/fi';
-import { setCustomizeDesignIsOpen } from '../../../../../reduxFunctions/PageControls/pageControls';
-import {useSelector, useDispatch} from "react-redux";
-import Box from '@mui/material/Box';
+import { useSelector } from "react-redux";
+import DrawerControls from '../../DrawerControls/DrawerControls';
 
 export default function EditDesign() {
-    const dispatch = useDispatch();
     const open = useSelector(state => state.pageControls.isCustomizeDesignIsOpen);
 
     return (
-        <div>hello world</div>
+        <aside className={`fixed top-13 right-0 h-screen`}>
+            <div className='flex'>
+                <div>
+                    <DrawerControls borderRadius="rounded-l-xl" right={true} drawerDisplay="edit" />
+                </div>
+                <aside className={`${open ? "w-80 bg-blue-950 h-screen" : "w-0"} duration-300 `}>
+                    <div className='flex items-center justify-between space-x-2'>
+
+                    </div>
+                </aside>
+
+            </div>
+
+        </aside>
     )
 }

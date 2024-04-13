@@ -12,7 +12,7 @@ import {
       isPage: 0, // shows the current page options
       isFilterActive: false,
       isEditing: false,
-      isChooseDesignIsOpen: false,
+      isChooseDesignIsOpen: true,
       isCustomizeDesignIsOpen: false,
       isMobileSlideBarOpen: false,
     },

@@ -7,7 +7,7 @@ import Profile from '../../../../Components/Profile/Profile';
 export default function NavigationBar() {
 
     return (
-        <header className='w-full' >
+        <header className='w-full ' >
             <nav className="px-2 flex items-center justify-between sm:py-0 lg:px-8">
                 <div className="flex lg:flex ">
                     <Link to="/" className="flex items-center -m-1.5 p-1.5">

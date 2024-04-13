@@ -1,0 +1,13 @@
+/* For WebKit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+* {
+    scrollbar-width: thin;
+}
+
+* {
+    scrollbar-width: thin;
+}

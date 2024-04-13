@@ -2,7 +2,6 @@ import { FaFacebookMessenger } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { SiGoogleads } from "react-icons/si";
 import { SiGooglemaps } from "react-icons/si";
-import { RxCross1 } from "react-icons/rx";
 
 const PluginsArray = [
     {
@@ -25,15 +24,15 @@ const PluginsArray = [
 
 export default function Plugins() {
     return (
-        <section className="flex flex-wrap justify-center cursor-pointer space-y-2">
+        <section className="flex flex-wrap justify-center space-y-2">
             {PluginsArray && PluginsArray.map((plugin) => (
-                <div key={plugin.name} className="flex justify-between font-semibold p-2 text-dark-text rounded w-full bg-dark-border">
-                    <div className="space-x-2 flex justify-between items-center">
+                <div key={plugin.name} className="cursor-pointer flex justify-between items-center font-semibold p-2 text-dark-text rounded w-full bg-dark-border">
+                    <div className="space-x-2 flex justify-between items-center ">
                         <span>{plugin.icon}</span>
                         <span>{plugin.name}</span>
                     </div>
                     <div>
-                        <button><RxCross1 className="font-bold" /></button>
+                        <div className="h-3 w-3 rounded-full bg-green-600"></div>
                     </div>
                 </div>
             ))}

@@ -52,6 +52,10 @@ import {
       setIsMobileSlideBarOpen: (state) => {
         state.isMobileSlideBarOpen = state.isMobileSlideBarOpen ? false : true;
       },
+      setIsPageActive: (state, action) => {
+        console.log(action.payload)
+        state.isPageActive = action.payload;
+      }
     },
   });
   
@@ -65,7 +69,8 @@ import {
     setEditingMode,
     setChooseDesignIsOpen,
     setCustomizeDesignIsOpen,
-    setIsMobileSlideBarOpen
+    setIsMobileSlideBarOpen,
+    setIsPageActive
   } = pageControlsSlice.actions;
   
   export default pageControlsSlice.reducer;

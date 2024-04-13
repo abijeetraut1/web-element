@@ -21,7 +21,6 @@ export default function NavigationBar() {
                     </Link>
                 </div>
 
-
                 <div className="hidden lg:flex lg:gap-x-3">
                     <div>
                         <Button buttonName='Save' />

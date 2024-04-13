@@ -1,37 +1,47 @@
+import { useSelector, useDispatch } from "react-redux";
+import { setIsPageActive } from "../../../../reduxFunctions/PageControls/pageControls";
+
 import { LuLayoutTemplate } from "react-icons/lu";
 import { BsGrid } from "react-icons/bs";
 import { FaPlus } from "react-icons/fa6";
 import { CgMediaLive } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoIosHelpCircleOutline } from "react-icons/io";
-
+import Chatgpt from "../../../../assets/CustomButtons/chatgpt/Chatgpt";
 
 export default function DesignNavigator() {
+    const dispatch = useDispatch();
+    const activeSection = useSelector(state => state.pageControls.isPageActive);
 
     return (
-        <section className="flex flex-col justify-between h-94vh text-dark-text p-2 text-2xl bg-dark-sliders">
-            <section className="flex flex-col space-y-6">
-                <button title="Add Pages" value="add-page" onClick={(el) => console.log(el.target)}>
+        <section className="flex flex-col justify-between h-94vh text-dark-text text-2xl bg-dark-sliders">
+            <section className="flex flex-col">
+                <button title="Add Pages" value="add-page" className={`p-3 ${activeSection === "add-pages" ? "bg-blue-950" : ""}`} onClick={() => dispatch(setIsPageActive("add-pages"))}>
                     <FaPlus />
                 </button>
                 
-                <button title="Templates">
+                <button title="Templates" className={`p-3 ${activeSection === "template" ? "bg-blue-950" : ""}`} onClick={() => dispatch(setIsPageActive("template"))}>
                     <LuLayoutTemplate />
                 </button>
 
-                <button title="Plugins">
+                <button title="Plugins" className={`p-3 ${activeSection === "plugin" ? "bg-blue-950" : ""}`} onClick={() => dispatch(setIsPageActive("plugin"))}>
                     <BsGrid />
                 </button>
+
+                <button title="Ai" className={`p-3 ${activeSection === "chatgpt" ? "bg-blue-950" : ""}`} onClick={() => dispatch(setIsPageActive("chatgpt"))}>
+                    <Chatgpt />
+                </button>
+
             </section>
 
-            <section className="flex flex-col space-y-5 ">
-                <button title="Host">
+            <section className="flex flex-col">
+                <button title="Host" className={`p-3 ${activeSection === "host" ? "bg-blue-950" : ""}`} onClick={() => dispatch(setIsPageActive("host"))}>
                     <CgMediaLive />
                 </button>
-                <button title="Setting">
+                <button title="Setting" className={`p-3 ${activeSection === "setting" ? "bg-blue-950" : ""}`} onClick={() => dispatch(setIsPageActive("setting"))}>
                     <IoSettingsOutline />
                 </button>
-                <button title="Help">
+                <button title="Help" className={`p-3 ${activeSection === "help" ? "bg-blue-950" : ""}`} onClick={() => dispatch(setIsPageActive("help"))}>
                     <IoIosHelpCircleOutline />
                 </button>
             </section>

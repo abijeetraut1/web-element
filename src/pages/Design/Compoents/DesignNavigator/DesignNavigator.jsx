@@ -15,7 +15,7 @@ export default function DesignNavigator() {
                     <FaPlus />
                 </button>
                 
-                <button title="Designs">
+                <button title="Templates">
                     <LuLayoutTemplate />
                 </button>
 

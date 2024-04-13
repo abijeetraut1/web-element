@@ -1,17 +1,10 @@
-import React from 'react';
 import LOGO from "../../../../assets/logo/logo.png";
 import { Link } from 'react-router-dom';
-import { HiMenu } from "react-icons/hi";
-import { useDispatch, useSelector } from 'react-redux';
-import { setIsMobileSlideBarOpen } from "../../../../reduxFunctions/PageControls/pageControls";
 import profileImage from "../../../../assets/test/cover.png";
 import Button from '../../../../Components/Buttons/Button';
 import Profile from '../../../../Components/Profile/Profile';
 
-
 export default function NavigationBar() {
-    // const dispatch = useDispatch();
-    // const mobileMenuOpen = useSelector(state => state.pageControls.isMobileSlideBarOpen);
 
     return (
         <header className='w-full' >
@@ -27,6 +20,7 @@ export default function NavigationBar() {
                         </div>
                     </Link>
                 </div>
+
 
                 <div className="hidden lg:flex lg:gap-x-3">
                     <div>

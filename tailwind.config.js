@@ -9,6 +9,12 @@ export default {
       backgroundColor: {
         "dark-navigation": "#192237",
         "dark-sliders": "#0F172A",
+      },
+      textColor:{
+        "dark-text": "#94A3B8",
+      },
+      height:{
+        "94vh":"94vh"
       }
     },
   },

@@ -65,19 +65,21 @@ export default function AddPages() {
 
     return (
         <>
-            <div className="space-y-2 p-2">
-                <div className="flex space-x-2 overflow-x-auto">
+            <div className="px-2">
+                <div className="flex space-x-2 pb-2 overflow-x-auto">
                     {websiteTypes && websiteTypes.map((type) => (
                         <div key={type}>
-                            <button className="py-2 px-5 bg-dark-button-bg rounded-sm text-dark-text-color font-bold">{type}</button>
+                            <button
+                                className="select-none w-full flex justify-between text-center font-semibold font-sans text-sm shadow-lg rounded-lg ring-1 ring-slate-900/5 px-4 py-3 bg-slate-800 dark:highlight-white/5 text-slate-200"
+                            >{type}</button>
                         </div>
                     ))}
                 </div>
 
                 <div className="space-y-2">
                     {ecommerce && ecommerce.map(page => (
-                        <div key={page.title} className="flex justify-between font-semibold p-2 text-dark-text-color rounded w-full bg-dark-button-bg">
-                            <div className="space-x-2">
+                        <div key={page.title} className="select-none w-full flex justify-between text-center bg-white text-slate-900 font-semibold font-sans text-sm shadow-lg rounded-lg ring-1 ring-slate-900/5 px-4 py-3 dark:bg-slate-800 dark:ring-0 dark:highlight-white/5 dark:text-slate-200">
+                            <div className="space-x-2 flex items-center">
                                 <button><IoMdArrowDropright /></button>
                                 <span>{page.title}</span>
                             </div>
@@ -87,7 +89,9 @@ export default function AddPages() {
                         </div>
                     ))}
                 </div>
-                <div className="text-center font-semibold p-2 text-dark-text-color rounded w-full bg-dark-button-bg">
+                <div
+                    className="mt-2 cursor-pointer text-center font-semibold p-2 text-dark-text-color rounded w-full bg-dark-button-bg"
+                >
                     <button><FaPlus /></button>
                 </div>
             </div>

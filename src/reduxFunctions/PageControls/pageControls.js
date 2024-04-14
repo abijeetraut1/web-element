@@ -13,7 +13,7 @@ import {
       isFilterActive: false,
       isEditing: false,
       isChooseDesignIsOpen: true,
-      isCustomizeDesignIsOpen: false,
+      isCustomizeDesignIsOpen: true,
       isMobileSlideBarOpen: false,
       isPageActive: "add-pages",
     },

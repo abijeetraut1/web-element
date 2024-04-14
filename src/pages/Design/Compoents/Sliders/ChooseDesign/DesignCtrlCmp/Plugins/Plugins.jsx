@@ -26,7 +26,9 @@ export default function Plugins() {
     return (
         <section className="flex flex-wrap justify-center space-y-2 p-2">
             {PluginsArray && PluginsArray.map((plugin) => (
-                <div key={plugin.name} className="cursor-pointer flex justify-between items-center font-semibold p-2 text-dark-text-color rounded w-full bg-dark-button-bg">
+                <div key={plugin.name}
+                    className="select-none w-full flex justify-between text-center bg-white text-slate-900 font-semibold font-sans text-sm shadow-lg rounded-lg ring-1 ring-slate-900/5 px-4 py-3 dark:bg-slate-800 dark:ring-0 dark:highlight-white/5 dark:text-slate-200"
+                >
                     <div className="space-x-2 flex justify-between items-center ">
                         <span>{plugin.icon}</span>
                         <span>{plugin.name}</span>

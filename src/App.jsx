@@ -3,6 +3,7 @@ import Home from './pages/Home/Home';
 import Design from './pages/Design/Design';
 import { Provider as ReduxProvider } from 'react-redux';
 import store from './reduxFunctions/Store';
+import "./App.css";
 
 function App() {
   return (

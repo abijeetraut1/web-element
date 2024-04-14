@@ -1,3 +1,4 @@
+import "./DisableNumberArrow.css"
 import { useSelector } from "react-redux";
 import DrawerControls from '../../DrawerControls/DrawerControls';
 import ElementSpaceing from "./components/ElementSpaceing/ElementSpaceing";
@@ -11,8 +12,8 @@ export default function EditDesign() {
                 <div>
                     <DrawerControls borderRadius="rounded-l-xl" right={true} drawerDisplay="edit" buttonStatus={open} />
                 </div>
-                <aside className={`${RightDrawerOpen ? "p-2 w-80 bg-dark-sliders-bg h-screen overflow-auto" : "w-0"} duration-300 py-2`}>
-                    <div className='flex items-center justify-between space-x-2'>
+                <aside className={`${RightDrawerOpen ? "w-80 bg-dark-sliders-bg h-screen overflow-auto" : "w-0"} duration-300 py-2`}>
+                    <div className='flex items-center justify-between'>
                         <ElementSpaceing />
                     </div>
                 </aside>

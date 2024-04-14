@@ -11,6 +11,7 @@ export default {
         "dark-navigation-drawer-bg": "#171717",
         "dark-sliders-bg": "#212121",
         "dark-button-bg": "#2E3D61",
+        "dark-workspace-bg": "#414141"
       },
       textColor: {
         "dark-text-color": "#94A3B8",

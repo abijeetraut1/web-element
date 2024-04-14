@@ -1,4 +1,3 @@
-import React from 'react';
 import NavigationBar from './Compoents/Navigation/NavigationBar';
 import { useEffect } from 'react';
 import ChooseDesign from './Compoents/Sliders/ChooseDesign/CustomizationDrawer';

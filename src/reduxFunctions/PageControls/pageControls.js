@@ -43,8 +43,12 @@ import {
       setEditingMode: (state) => {
         state.isEditing = state.isEditing ? false : true;
       },
-      setChooseDesignIsOpen: (state) => {
-        state.isChooseDesignIsOpen = state.isChooseDesignIsOpen ? false : true;
+      setChooseDesignIsOpen: (state, action) => {
+        if(action.payload === "tabs"){
+          state.isChooseDesignIsOpen = state.isChooseDesignIsOpen === true ? true : true;
+        }else{
+          state.isChooseDesignIsOpen = state.isChooseDesignIsOpen === true ? false : true;
+        }
       },
       setCustomizeDesignIsOpen: (state) => {
         state.isCustomizeDesignIsOpen = state.isCustomizeDesignIsOpen ? false : true;
@@ -53,7 +57,6 @@ import {
         state.isMobileSlideBarOpen = state.isMobileSlideBarOpen ? false : true;
       },
       setIsPageActive: (state, action) => {
-        console.log(action.payload)
         state.isPageActive = action.payload;
       }
     },

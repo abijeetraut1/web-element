@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { setIsPageActive } from "../../../../reduxFunctions/PageControls/pageControls";
+import { setIsPageActive, setChooseDesignIsOpen } from "../../../../reduxFunctions/PageControls/pageControls";
 
 import { LuLayoutTemplate } from "react-icons/lu";
 import { BsGrid } from "react-icons/bs";
@@ -21,6 +21,7 @@ export default function DesignNavigator() {
                     className={`p-3 ${activeSection === "add-pages" ? "bg-blue-950" : ""}`}
                     onClick={() => {
                         dispatch(setIsPageActive("add-pages"));
+                        dispatch(setChooseDesignIsOpen("tabs"));
                     }}>
                     <FaPlus />
                 </button>
@@ -30,6 +31,7 @@ export default function DesignNavigator() {
                     className={`p-3 ${activeSection === "template" ? "bg-blue-950" : ""}`}
                     onClick={() => {
                         dispatch(setIsPageActive("template"));
+                        dispatch(setChooseDesignIsOpen("tabs"));
                     }}
                 >
                     <LuLayoutTemplate />
@@ -40,6 +42,7 @@ export default function DesignNavigator() {
                     className={`p-3 ${activeSection === "plugin" ? "bg-blue-950" : ""}`}
                     onClick={() => {
                         dispatch(setIsPageActive("plugin"));
+                        dispatch(setChooseDesignIsOpen("tabs"));
                     }}>
                     <BsGrid />
                 </button>
@@ -47,13 +50,25 @@ export default function DesignNavigator() {
             </section>
 
             <section className="flex flex-col">
-                <button title="Host" className={`p-3 ${activeSection === "host" ? "bg-blue-950" : ""}`} onClick={() => dispatch(setIsPageActive("host"))}>
+                <button title="Host" className={`p-3 ${activeSection === "host" ? "bg-blue-950" : ""}`}
+                    onClick={() => {
+                        dispatch(setIsPageActive("host"))
+                        dispatch(setChooseDesignIsOpen("tabs"));
+                    }}
+                >
                     <CgMediaLive />
                 </button>
-                <button title="Setting" className={`p-3 ${activeSection === "setting" ? "bg-blue-950" : ""}`} onClick={() => dispatch(setIsPageActive("setting"))}>
+                <button title="Setting" className={`p-3 ${activeSection === "setting" ? "bg-blue-950" : ""}`} onClick={() => {
+                    dispatch(setIsPageActive("setting"))
+                    dispatch(setChooseDesignIsOpen("tabs"));
+                }}>
                     <IoSettingsOutline />
                 </button>
-                <button title="Help" className={`p-3 ${activeSection === "help" ? "bg-blue-950" : ""}`} onClick={() => dispatch(setIsPageActive("help"))}>
+                <button title="Help" className={`p-3 ${activeSection === "help" ? "bg-blue-950" : ""}`} onClick={() => {
+                    dispatch(setIsPageActive("help"))
+                    dispatch(setChooseDesignIsOpen("tabs"));
+
+                }}>
                     <IoIosHelpCircleOutline />
                 </button>
             </section>

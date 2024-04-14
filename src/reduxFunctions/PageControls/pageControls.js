@@ -15,7 +15,7 @@ import {
       isChooseDesignIsOpen: true,
       isCustomizeDesignIsOpen: false,
       isMobileSlideBarOpen: false,
-      isPageActive: "add-page",
+      isPageActive: "add-pages",
     },
     reducers: {
       setHostingPannelActive: (state, action) => {

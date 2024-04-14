@@ -1,7 +1,7 @@
 import React from 'react';
 import NavigationBar from './Compoents/Navigation/NavigationBar';
 import { useEffect } from 'react';
-import ChooseDesign from './Compoents/Sliders/ChooseDesign/ChooseDesign';
+import ChooseDesign from './Compoents/Sliders/ChooseDesign/CustomizationDrawer';
 import EditDesign from './Compoents/Sliders/EditDesign/EditDesign';
 import EditorPanel from './Compoents/Sliders/EditorPanel/EditorPanel';
 

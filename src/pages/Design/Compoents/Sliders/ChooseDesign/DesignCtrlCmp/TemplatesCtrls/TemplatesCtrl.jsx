@@ -5,7 +5,7 @@ import Button from "../../../../../../../Components/Buttons/Button";
 
 export default function TemplatesCtrl() {
     return (
-        <div className="space-y-2 h-full">
+        <div className="space-y-2 h-full p-2">
             <div className="space-y-2">
                 <div className="relative rounded-t-lg overflow-hidden bg-contain">
                     <button className="absolute top-0 right-0 mt-2 mr-2" title="Uploader Info">

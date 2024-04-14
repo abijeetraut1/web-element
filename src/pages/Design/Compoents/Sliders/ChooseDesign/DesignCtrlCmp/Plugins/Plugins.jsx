@@ -24,7 +24,7 @@ const PluginsArray = [
 
 export default function Plugins() {
     return (
-        <section className="flex flex-wrap justify-center space-y-2">
+        <section className="flex flex-wrap justify-center space-y-2 p-2">
             {PluginsArray && PluginsArray.map((plugin) => (
                 <div key={plugin.name} className="cursor-pointer flex justify-between items-center font-semibold p-2 text-dark-text rounded w-full bg-dark-border">
                     <div className="space-x-2 flex justify-between items-center ">

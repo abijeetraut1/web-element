@@ -64,31 +64,34 @@ const websiteTypes = ["E-Commerce"];
 export default function AddPages() {
 
     return (
-        <div className="space-y-2 p-2">
-            <div className="flex space-x-2 overflow-x-auto">
-                {websiteTypes && websiteTypes.map((type) => (
-                    <div key={type}>
-                        <button className="p-2 bg-dark-border rounded-sm text-dark-text">{type}</button>
-                    </div>
-                ))}
-            </div>
+        <>
+            <div className="space-y-2 p-2">
+                <div className="flex space-x-2 overflow-x-auto">
+                    {websiteTypes && websiteTypes.map((type) => (
+                        <div key={type}>
+                            <button className="py-2 px-5 bg-dark-border rounded-sm text-dark-text font-bold">{type}</button>
+                        </div>
+                    ))}
+                </div>
 
-            <div className="space-y-2">
-                {ecommerce && ecommerce.map(page => (
-                    <div key={page.title} className="flex justify-between font-semibold p-2 text-dark-text rounded w-full bg-dark-border">
-                        <div className="space-x-2">
-                            <button><IoMdArrowDropright /></button>
-                            <span>{page.title}</span>
+                <div className="space-y-2">
+                    {ecommerce && ecommerce.map(page => (
+                        <div key={page.title} className="flex justify-between font-semibold p-2 text-dark-text rounded w-full bg-dark-border">
+                            <div className="space-x-2">
+                                <button><IoMdArrowDropright /></button>
+                                <span>{page.title}</span>
+                            </div>
+                            <div>
+                                <button><RxCross1 className="font-bold" /></button>
+                            </div>
                         </div>
-                        <div>
-                            <button><RxCross1 className="font-bold" /></button>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
+                <div className="text-center font-semibold p-2 text-dark-text rounded w-full bg-dark-border">
+                    <button><FaPlus /></button>
+                </div>
             </div>
-            <div className="text-center font-semibold p-2 text-dark-text rounded w-full bg-dark-border">
-                <button><FaPlus /></button>
-            </div>
-        </div>
+        </>
+
     )
 }

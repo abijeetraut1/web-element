@@ -8,7 +8,7 @@ export default function EditDesign() {
         <aside className={`fixed top-13 right-0 h-screen`}>
             <div className='flex'>
                 <div>
-                    <DrawerControls borderRadius="rounded-l-xl" right={true} drawerDisplay="edit" />
+                    <DrawerControls borderRadius="rounded-l-xl" right={true} drawerDisplay="edit" buttonStatus={open} />
                 </div>
                 <aside className={`${open ? "w-80 bg-blue-950 h-screen" : "w-0"} duration-300 `}>
                     <div className='flex items-center justify-between space-x-2'>

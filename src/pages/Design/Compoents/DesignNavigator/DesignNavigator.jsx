@@ -7,7 +7,6 @@ import { FaPlus } from "react-icons/fa6";
 import { CgMediaLive } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoIosHelpCircleOutline } from "react-icons/io";
-import Chatgpt from "../../../../assets/CustomButtons/chatgpt/Chatgpt";
 
 export default function DesignNavigator() {
     const dispatch = useDispatch();
@@ -16,20 +15,33 @@ export default function DesignNavigator() {
     return (
         <section className="flex flex-col justify-between h-94vh text-dark-text text-2xl bg-dark-sliders">
             <section className="flex flex-col">
-                <button title="Add Pages" value="add-page" className={`p-3 ${activeSection === "add-pages" ? "bg-blue-950" : ""}`} onClick={() => dispatch(setIsPageActive("add-pages"))}>
+                <button
+                    title="Add Pages"
+                    value="add-page"
+                    className={`p-3 ${activeSection === "add-pages" ? "bg-blue-950" : ""}`}
+                    onClick={() => {
+                        dispatch(setIsPageActive("add-pages"));
+                    }}>
                     <FaPlus />
                 </button>
-                
-                <button title="Templates" className={`p-3 ${activeSection === "template" ? "bg-blue-950" : ""}`} onClick={() => dispatch(setIsPageActive("template"))}>
+
+                <button
+                    title="Templates"
+                    className={`p-3 ${activeSection === "template" ? "bg-blue-950" : ""}`}
+                    onClick={() => {
+                        dispatch(setIsPageActive("template"));
+                    }}
+                >
                     <LuLayoutTemplate />
                 </button>
 
-                <button title="Plugins" className={`p-3 ${activeSection === "plugin" ? "bg-blue-950" : ""}`} onClick={() => dispatch(setIsPageActive("plugin"))}>
+                <button
+                    title="Plugins"
+                    className={`p-3 ${activeSection === "plugin" ? "bg-blue-950" : ""}`}
+                    onClick={() => {
+                        dispatch(setIsPageActive("plugin"));
+                    }}>
                     <BsGrid />
-                </button>
-
-                <button title="Ai" className={`p-3 ${activeSection === "chatgpt" ? "bg-blue-950" : ""}`} onClick={() => dispatch(setIsPageActive("chatgpt"))}>
-                    <Chatgpt />
                 </button>
 
             </section>

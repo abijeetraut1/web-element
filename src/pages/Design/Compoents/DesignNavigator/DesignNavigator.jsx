@@ -13,12 +13,12 @@ export default function DesignNavigator() {
     const activeSection = useSelector(state => state.pageControls.isPageActive);
 
     return (
-        <section className="flex flex-col justify-between h-94vh text-dark-text text-2xl bg-dark-sliders">
+        <section className="flex flex-col justify-between h-94vh text-dark-text-color text-2xl bg-dark-navigation-drawer-bg">
             <section className="flex flex-col">
                 <button
                     title="Add Pages"
                     value="add-page"
-                    className={`p-3 ${activeSection === "add-pages" ? "bg-blue-950" : ""}`}
+                    className={`p-3 ${activeSection === "add-pages" ? "bg-dark-sliders-bg" : ""}`}
                     onClick={() => {
                         dispatch(setIsPageActive("add-pages"));
                         dispatch(setChooseDesignIsOpen("tabs"));
@@ -28,7 +28,7 @@ export default function DesignNavigator() {
 
                 <button
                     title="Templates"
-                    className={`p-3 ${activeSection === "template" ? "bg-blue-950" : ""}`}
+                    className={`p-3 ${activeSection === "template" ? "bg-dark-sliders-bg" : ""}`}
                     onClick={() => {
                         dispatch(setIsPageActive("template"));
                         dispatch(setChooseDesignIsOpen("tabs"));
@@ -39,7 +39,7 @@ export default function DesignNavigator() {
 
                 <button
                     title="Plugins"
-                    className={`p-3 ${activeSection === "plugin" ? "bg-blue-950" : ""}`}
+                    className={`p-3 ${activeSection === "plugin" ? "bg-dark-sliders-bg" : ""}`}
                     onClick={() => {
                         dispatch(setIsPageActive("plugin"));
                         dispatch(setChooseDesignIsOpen("tabs"));

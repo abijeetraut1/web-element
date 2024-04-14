@@ -9,7 +9,7 @@ export default function DrawerControls({ borderRadius, right, drawerDisplay, but
     return (
         <div className='h-screen flex items-center'>
             <button
-                className={`bg-dark-sliders text-white py-5 px-2 ${borderRadius}`}
+                className={`bg-dark-sliders-bg text-white py-5 px-2 ${borderRadius}`}
                 onClick={() => drawerDisplay === "edit" ? dispatch(setCustomizeDesignIsOpen(false)) : drawerDisplay === "drawer" ? dispatch(setChooseDesignIsOpen(buttonStatus ? false : true)) : ""}
             >
                 {right ? <FaChevronRight /> : <FaChevronLeft />}

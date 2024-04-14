@@ -69,14 +69,14 @@ export default function AddPages() {
                 <div className="flex space-x-2 overflow-x-auto">
                     {websiteTypes && websiteTypes.map((type) => (
                         <div key={type}>
-                            <button className="py-2 px-5 bg-dark-border rounded-sm text-dark-text font-bold">{type}</button>
+                            <button className="py-2 px-5 bg-dark-button-bg rounded-sm text-dark-text-color font-bold">{type}</button>
                         </div>
                     ))}
                 </div>
 
                 <div className="space-y-2">
                     {ecommerce && ecommerce.map(page => (
-                        <div key={page.title} className="flex justify-between font-semibold p-2 text-dark-text rounded w-full bg-dark-border">
+                        <div key={page.title} className="flex justify-between font-semibold p-2 text-dark-text-color rounded w-full bg-dark-button-bg">
                             <div className="space-x-2">
                                 <button><IoMdArrowDropright /></button>
                                 <span>{page.title}</span>
@@ -87,7 +87,7 @@ export default function AddPages() {
                         </div>
                     ))}
                 </div>
-                <div className="text-center font-semibold p-2 text-dark-text rounded w-full bg-dark-border">
+                <div className="text-center font-semibold p-2 text-dark-text-color rounded w-full bg-dark-button-bg">
                     <button><FaPlus /></button>
                 </div>
             </div>

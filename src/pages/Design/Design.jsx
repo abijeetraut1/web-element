@@ -12,7 +12,7 @@ export default function Design() {
 
   return (
     <section>
-      <div className='p-2 bg-dark-navigation'>
+      <div className='p-2 bg-dark-navigation-bg'>
         <NavigationBar />
       </div>
 

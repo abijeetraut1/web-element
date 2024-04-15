@@ -14,6 +14,7 @@ export default {
         "dark-workspace-bg": "#414141"
       },
       textColor: {
+        "dark-heading":"#9b9b9b",
         "dark-text-color": "#94A3B8",
       },
       height: {

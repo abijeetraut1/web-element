@@ -16,7 +16,7 @@ export default function ChooseDesign() {
                 <div>
                     <DesignNavigator />
                 </div>
-                <aside className={`${leftDrawerOpen ? "w-80 bg-dark-sliders-bg h-screen overflow-auto" : "w-0"} duration-300 py-2`}>
+                <aside className={`${leftDrawerOpen ? "w-64 bg-dark-sliders-bg h-screen overflow-auto" : "w-0"} duration-300 py-2`}>
                     {leftDrawerOpen && (
                         <div className='flex flex-col justify-center'>
                             {clickedPanel === "plugin" && <Plugins />}

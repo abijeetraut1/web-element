@@ -100,7 +100,7 @@ export default function ElementSpaceing() {
         <div>
           <div className="flex space-x-2">
             <div className="flex items-center space-x-2 p-1 bg-dark-sliders-bg rounded border border-transparent hover:border-dark-border-color">
-              <span title="Rotate" className="font-mono text-dark-text-color"><AiOutlineRadiusUpleft/></span>
+              <span title="Radius" className="font-mono text-dark-text-color"><AiOutlineRadiusUpleft/></span>
               <span>
                 <input
                   type="number"

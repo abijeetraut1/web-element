@@ -70,7 +70,7 @@ export default function AddPages() {
                     {websiteTypes && websiteTypes.map((type) => (
                         <div key={type}>
                             <button
-                                className="select-none w-full flex justify-between text-center font-semibold font-sans text-sm shadow-lg rounded-lg ring-1 ring-slate-900/5 px-4 py-3 bg-slate-800 dark:highlight-white/5 text-slate-200"
+                                className="select-none hover:bg-hover-color w-full flex justify-between text-center font-semibold font-sans text-sm shadow-lg rounded-lg ring-1 ring-slate-900/5 px-4 py-3 bg-slate-800 dark:highlight-white/5 text-slate-200"
                             >{type}</button>
                         </div>
                     ))}
@@ -78,7 +78,7 @@ export default function AddPages() {
 
                 <div className="space-y-2">
                     {ecommerce && ecommerce.map(page => (
-                        <div key={page.title} className="select-none w-full flex justify-between text-center bg-white text-slate-900 font-semibold font-sans text-sm shadow-lg rounded-lg ring-1 ring-slate-900/5 px-4 py-3 dark:bg-slate-800 dark:ring-0 dark:highlight-white/5 dark:text-slate-200">
+                        <div key={page.title} className="select-none w-full flex justify-between text-center bg-white hover:bg-hover-color text-slate-900 font-semibold font-sans text-sm shadow-lg rounded-lg ring-1 ring-slate-900/5 px-4 py-3 dark:bg-slate-800 dark:ring-0 dark:highlight-white/5 dark:text-slate-200">
                             <div className="space-x-2 flex items-center">
                                 <button><IoMdArrowDropright /></button>
                                 <span>{page.title}</span>

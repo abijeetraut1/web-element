@@ -18,7 +18,7 @@ export default function DesignNavigator() {
                 <button
                     title="Add Pages"
                     value="add-page"
-                    className={`p-3 ${activeSection === "add-pages" ? "bg-dark-sliders-bg" : ""}`}
+                    className={`p-3 rounded-md hover:bg-hover-color ${activeSection === "add-pages" ? "bg-hover-color p-2 rounded-md" : ""}`}
                     onClick={() => {
                         dispatch(setIsPageActive("add-pages"));
                         dispatch(setChooseDesignIsOpen("tabs"));
@@ -28,7 +28,7 @@ export default function DesignNavigator() {
 
                 <button
                     title="Templates"
-                    className={`p-3 ${activeSection === "template" ? "bg-dark-sliders-bg" : ""}`}
+                    className={`p-3 rounded-md hover:bg-hover-color ${activeSection === "template" ? "bg-hover-color p-2 rounded-md" : ""}`}
                     onClick={() => {
                         dispatch(setIsPageActive("template"));
                         dispatch(setChooseDesignIsOpen("tabs"));
@@ -39,7 +39,7 @@ export default function DesignNavigator() {
 
                 <button
                     title="Plugins"
-                    className={`p-3 ${activeSection === "plugin" ? "bg-dark-sliders-bg" : ""}`}
+                    className={`p-3 rounded-md hover:bg-hover-color ${activeSection === "plugin" ? "bg-hover-color p-2 rounded-md" : ""}`}
                     onClick={() => {
                         dispatch(setIsPageActive("plugin"));
                         dispatch(setChooseDesignIsOpen("tabs"));
@@ -50,7 +50,7 @@ export default function DesignNavigator() {
             </section>
 
             <section className="flex flex-col">
-                <button title="Host" className={`p-3 ${activeSection === "host" ? "bg-blue-950" : ""}`}
+                <button title="Host" className={`p-3 rounded-md hover:bg-hover-color ${activeSection === "host" ? "bg-hover-color p-2 rounded-md" : ""}`}
                     onClick={() => {
                         dispatch(setIsPageActive("host"))
                         dispatch(setChooseDesignIsOpen("tabs"));
@@ -58,13 +58,13 @@ export default function DesignNavigator() {
                 >
                     <CgMediaLive />
                 </button>
-                <button title="Setting" className={`p-3 ${activeSection === "setting" ? "bg-blue-950" : ""}`} onClick={() => {
+                <button title="Setting" className={`p-3 rounded-md hover:bg-hover-color ${activeSection === "setting" ? "bg-hover-color p-2 rounded-md" : ""}`} onClick={() => {
                     dispatch(setIsPageActive("setting"))
                     dispatch(setChooseDesignIsOpen("tabs"));
                 }}>
                     <IoSettingsOutline />
                 </button>
-                <button title="Help" className={`p-3 ${activeSection === "help" ? "bg-blue-950" : ""}`} onClick={() => {
+                <button title="Help" className={`p-3 rounded-md hover:bg-hover-color ${activeSection === "help" ? "bg-hover-color p-2 rounded-md" : ""}`} onClick={() => {
                     dispatch(setIsPageActive("help"))
                     dispatch(setChooseDesignIsOpen("tabs"));
 
